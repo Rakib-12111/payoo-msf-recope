@@ -4,6 +4,7 @@ document.getElementById('btn-add-money').addEventListener('click',function(event
 
 
     const addMoney = document.getElementById('input-add-money').value;
+    const addMoneyNumber = parseFloat(addMoney)
 
     const pinNumber = document.getElementById('input-pin-number').value;
 
@@ -12,7 +13,12 @@ document.getElementById('btn-add-money').addEventListener('click',function(event
    if( pinNumber === '1234'){
    
     // get the account balance
+    const balance = document.getElementById('account-balance').innerText;
+    const balanceNumber = parseFloat(balance);
     
+    const newBalance = addMoneyNumber + balanceNumber ;
+    
+    document.getElementById('account-balance').innerText = newBalance;
 
    }
     else{
